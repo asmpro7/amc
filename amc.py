@@ -25,7 +25,6 @@ soup = BeautifulSoup(page.content, "lxml")
 mydiv = soup.find("div", {'class': 'post-content-bd'})
 myimg = mydiv.find(
     "img", {"decoding": "async", "sizes": "(max-width: 712px) 100vw, 712px"})
-myimg = myimg["src"].split("/")[-1].split(".")[0]
-
+myimg = myimg["src"]
 print("\033[31m the code is:\033[31;1;40m", myimg)
 print("\n\033[32m AMC by asmpro \033[m")
